@@ -418,8 +418,28 @@ body {
 .cart-item span {
     margin-right: 10px;
 }
+.cart .btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;  /* Centers the button horizontally */
+}
 
-
+.btn-book {
+    background-color: gray;
+    border-radius: 8px;
+    color: white;
+}
+.cart .btn:disabled {
+    cursor: not-allowed; /* Change cursor to not-allowed when button is disabled */
+    opacity: 0.6; /* Make disabled button slightly transparent */
+}
+.btn-pink {
+    background-color: #a64d79;;
+    border-radius: 8px;
+    cursor: pointer;
+}
 /*booking form*/
 .form-container {
     font-family: 'Poppins';
