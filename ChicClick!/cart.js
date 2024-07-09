@@ -119,12 +119,12 @@ updateButtonState();
 
 nextStepButton.addEventListener('click', function() {
     if (manicureCheckbox.checked) {
-        window.location.href = 'step2-manicure.html';
+        window.location.href = 'step 2-manicure.html';
     } else if (nailArtCheckbox.checked) {
-        window.location.href = 'step2-nail-art.html';
+        window.location.href = 'step 2-nail-art.html';
     } else {
         // Default action if none of the specific services are selected
-        window.location.href = 'step2-manicure.html';
+        window.location.href = 'step 2-manicure.html';
     }
 });
 
