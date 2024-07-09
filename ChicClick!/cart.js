@@ -1,6 +1,7 @@
 const services = document.querySelectorAll('input[name="special"]');
 const cartItems = document.getElementById('cart-items');
 const nextStepButton = document.getElementById('nextStepButton');
+const proceedButton = document.getElementById('proceed-to-booking');
 const pedicureCheckbox = document.getElementById('pedicure');
 const manicureCheckbox = document.getElementById('manicure');
 const nailEnhancementsCheckbox = document.getElementById('nail-enhancements');
@@ -32,15 +33,31 @@ function updateCart() {
 function updateButtonState() {
     const selectedServices = Array.from(services).filter(service => service.checked);
 
-    // Enable/disable next step button based on any selection
-    if (selectedServices.length > 0) {
-        nextStepButton.classList.add('enabled');
-        nextStepButton.classList.add('pink');
-        nextStepButton.disabled = false;
-    } else {
+    // Check for nail enhancements and update proceed to booking button
+    if (nailEnhancementsCheckbox.checked) {
+        proceedButton.classList.remove('btn-gray');
+        proceedButton.classList.add('btn-pink');
+        proceedButton.disabled = false;
+
+        // Disable next step button when proceed to booking is enabled
         nextStepButton.classList.remove('enabled');
         nextStepButton.classList.remove('pink');
         nextStepButton.disabled = true;
+    } else {
+        proceedButton.classList.remove('btn-pink');
+        proceedButton.classList.add('btn-gray');
+        proceedButton.disabled = true;
+
+        // Enable/disable next step button based on any selection
+        if (selectedServices.length > 0) {
+            nextStepButton.classList.add('enabled');
+            nextStepButton.classList.add('pink');
+            nextStepButton.disabled = false;
+        } else {
+            nextStepButton.classList.remove('enabled');
+            nextStepButton.classList.remove('pink');
+            nextStepButton.disabled = true;
+        }
     }
 }
 
@@ -102,12 +119,18 @@ updateButtonState();
 
 nextStepButton.addEventListener('click', function() {
     if (manicureCheckbox.checked) {
-        window.location.href = 'step 2-manicure.html';
+        window.location.href = 'step2-manicure.html';
     } else if (nailArtCheckbox.checked) {
-        window.location.href = 'step 2-nail art.html';
+        window.location.href = 'step2-nail-art.html';
     } else {
         // Default action if none of the specific services are selected
-        window.location.href = 'step 2-manicure.html';
+        window.location.href = 'step2-manicure.html';
+    }
+});
+
+proceedButton.addEventListener('click', function() {
+    if (!proceedButton.disabled) {
+        window.location.href = 'booking.html';
     }
 });
 
