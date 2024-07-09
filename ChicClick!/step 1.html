@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChicClick! Nail Salon</title>
+    <link rel="icon" sizes="500x500" href="images/tablogo.png">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="navbar-brand">
+            <a href="index.html">
+                <img src="logo.png" alt="ChicClick! Nail Salon Logo" width="130" height="130" class="d-inline-block align-top">
+            </a>            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#nail-designs-section">Designs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcoming Section -->
+    <header class="hero-section-1">
+    </header>
+
+    <div class="container">	
+        <div class="wrapper">	
+        <div class="arrow-steps clearfix">
+                <div class="step current"> <span>Step 1</span> </div>
+                <div class="step"> <span>Step 2</span> </div>
+                <div class="step"> <span>Step 3</span> </div>
+            </div>
+            <div class="nav clearfix">
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Section -->
+    <div class="services-container">
+        <div class="specials">
+            <h2>ChicClick Specials</h2>
+            <div class="special">
+                <input type="checkbox" name="special" id="manicure" class="custom-checkbox" data-price="350">
+                <label for="manicure">
+                    <div class="details">
+                        <span class="title">Basic Manicure</span>
+                        <span class="price">₱350.00</span>
+                    </div>
+                    <div class="services-description">
+                        <small>60 mins</small>
+                        <p>Speedy service for on-the-run, includes nail shaping, cuticle treatment, moisturizing massage and "Flash Dry" finish to keep nails from smudging as you dash out the door.</p>
+                    </div>
+                </label>
+            </div>
+            <div class="special">
+                <input type="checkbox" name="special" id="pedicure" class="custom-checkbox" data-price="350">
+                <label for="pedicure">
+                    <div class="details">
+                        <span class="title">Basic Pedicure</span>
+                        <span class="price">₱350.00</span>
+                    </div>
+                    <div class="services-description">
+                        <small>60 mins</small>
+                        <p>Give your feet the ultimate pampering with our premium pedicure service that come with proper nail clipping, scrubbing, lotions, and massages also followed by a dazzling nail polish to give your feet a brand new look and feel.</p>
+                    </div>
+                </label>
+            </div>
+            <div class="special">
+                <input type="checkbox" name="special" id="nail-enhancements" class="custom-checkbox" data-price="350">
+                <label for="nail-enhancements">
+                    <div class="details">
+                        <span class="title">Nail Enhancements</span>
+                        <span class="price">₱350.00</span>
+                    </div>
+                    <div class="services-description">
+                        <small>60 mins</small>
+                        <p>A gentle way of cleaning and pampering your nails, removing excess oil and finishing off with a smoothing Cream  massage to create velvety-smooth hands.</p>
+                    </div>
+                </label>
+            </div>
+            <div class="special">
+                <input type="checkbox" name="special" id="nail-art" class="custom-checkbox" data-price="350">
+                <label for="nail-art">
+                    <div class="details">
+                        <span class="title">Nail Art</span>
+                        <span class="price">₱350.00</span>
+                    </div>
+                    <div class="services-description">
+                        <small>60 mins</small>
+                        <p>Whether it is professionally carved designs and patterns, or spectacular layered designs and petals, our artists will paint your nails as per your personality and preferred style.</p>
+                    </div>
+                </label>
+            </div>
+        </div>
+        
+        <div class="cart">
+            <h3>In your cart</h3>
+            <div id="cart-items"></div>
+            <div>Total: ₱<span id="total-price">0</span></div>
+        </div>
+    </div>
+     
+    <div class="form-group-button">
+        <button type="button" id="nextStepButton" class="next-step-button enabled">
+            <span class="button-text">
+                <span>Next Step</span>
+                <small>Choose your design</small>
+            </span>
+            <span class="button-arrow">→</span>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="cart.js"></script>
+    <script src="https://kit.fontawesome.com/e5726c15b9.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(function(){
+            // Load footer.html into #footer-placeholder
+            $("#footer-placeholder").load("footer.html", function() {
+                // Event listener for Terms & Conditions modal
+                $('#terms-conditions-link').on('click', function(event) {
+                    event.preventDefault(); // Prevent default link behavior
+                    $('#termsModal').modal('show'); // Show Terms & Conditions modal
+                });
+    
+                // Event listener for Privacy Policy modal
+                $('#privacy-policy-link').on('click', function(event) {
+                    event.preventDefault(); // Prevent default link behavior
+                    $('#privacyPolicyModal').modal('show'); // Show Privacy Policy modal
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
