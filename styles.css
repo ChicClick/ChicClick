@@ -1,0 +1,648 @@
+/* Custom Styles for ChicClick! Nail Salon */
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@font-face {
+    font-family: 'Gladiola';
+    src: url('fonts/gladiola-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    background: url('headerbg.png') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+    position: relative;
+}
+
+.hero-section .container {
+    position: absolute;
+    top: 350px; 
+    left: 70px; 
+    max-width: 600px;
+}
+
+.hero-section h1 {
+    font-family: 'Gladiola', sans-serif;
+}
+
+.hero-section p {
+    font-size: 20px;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: transparent !important;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+    margin-top: 0;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    font-size: 14px;
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: #ffffff;
+    left: 0;
+    bottom: -3px;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+/* Button Styling */
+.btn-primary {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #d881a8;
+    font-size: 14px;
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #d881a8;
+    border-color: #d881a8;
+}
+
+.btn-book-now {
+    margin-right: 40px; 
+}
+
+
+/* Nail Designs Section Styling */
+.nail-designs-section {
+    background-color: #fbf6f1; 
+    padding: 50px 0;
+}
+
+.nail-designs-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #d881a8;
+}
+
+.nail-designs-section h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #ac6666;
+}
+
+.nail-designs-section p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #ac6666;
+}
+
+.short-line {
+    width: 100px;
+    border: 1px solid #d881a8;
+    border-radius: 10px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #d881a8;
+    font-weight: bold;
+}
+
+
+/* Services Section Styling */
+.services-section {
+    background-color: #b04273; 
+    padding: 50px 0;
+    color: white; 
+}
+
+.service-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.services-section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.service-box img {
+    max-width: 100%; 
+    border-radius: 10px;
+}
+
+
+/* Feedback Section Styling */
+.feedback-section {
+    background-color: #ffe2ee;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.feedback-section h2 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 30px;
+    color: #9a3a65;
+    font-size: 18px;
+}
+
+.feedback-message p.feedback-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #9a3a65;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.feedback-message p.feedback-name {
+    font-family: 'Poppins', sans-serif;
+    color: #ac6666;
+    font-size: 18px; 
+    margin-top: 0px;
+}
+
+.feedback-message .star-rating {
+    font-size: 18px;
+    color: #ac6666;
+    margin-top: 20px;
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: #41393f; 
+    color: white;
+    padding: 50px 0;
+}
+
+.footer h5 {
+    font-size: 16px;
+    font-weight:500;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+    color: #ffffff;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.footer ul li a {
+    color: #ffffff; 
+    text-decoration: none; 
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #d881a8; 
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    color: #ffffff;
+    font-size: 24px; 
+}
+
+.social-icons a:hover {
+    color: #d881a8;
+}
+
+.footer .footer-bottom {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+.footer .footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer .footer-bottom a:hover {
+    color: #d881a8;
+}
+
+.footer .footer-bottom span {
+    color: #fff;
+    margin: 0 10px;
+}
+
+
+/* Responsive styling for services section*/
+@media (min-width: 768px) {
+    .text-md-right {
+        text-align: right;
+    }
+
+    .text-md-left {
+        text-align: left;
+    }
+
+    .align-items-center {
+        align-items: center !important;
+    }
+}
+
+/* Responsive adjustments for footer */
+@media (max-width: 767.98px) {
+    .footer .col-md-6 {
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+/* Center navbar items on small screens */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        text-align: right;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 2px solid #ac6666;
+    width: 80%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: row;
+}
+
+.modal-body img {
+    max-width: 40%;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.modal-details {
+    display: flex;
+    flex-direction: column; 
+    max-width: 60%;
+    justify-content: center;
+}
+
+#popup-title {
+    font-weight: bold;
+}
+
+.close {
+    position: absolute; 
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #B04273;
+    text-decoration: none;
+}
+
+/* Skin Tone Buttons */
+.skin-tone-button {
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    margin-right: 10px;
+}
+
+.light-skin-button {
+    background-color: #E2C0A3;
+    color: white;
+}
+
+.medium-skin-button {
+    background-color: #9A6843;
+    color: white;
+}
+
+.dark-skin-button {
+    background-color: #875122;
+    color: white;
+}
+
+.book-now {
+    background-color: #d881a8;
+    border: none;
+    color: #ffffff;
+    border-radius: 20px;
+    width: 60%;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.book-now:hover {
+    background-color: #B04273;
+    color: #ffffff;
+}
+
+
+/* About Us Styling */
+.about-section {
+    background: url('headerbg.png') no-repeat center center/cover;
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.about-container {
+    background-color: #fbf6f1;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    margin-top: 80px;
+}
+
+.about-container h1 {
+    font-family: 'Gladiola', 'sans serif';
+    text-align: center;
+    color: #B04273;
+    font-size: 40px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    width: 100%;    
+}
+
+.about-image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 40%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.about-image {
+    width: 100%;
+    flex-grow: 1;
+    border-radius: 10px;
+}
+
+.about-text {
+    max-width: 80%;
+    text-align: justify;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.drip-image-section {
+    position: relative;
+    margin-top: -50px;
+    text-align: center;
+    background-image: url('images/drippink.png');
+    background-repeat: repeat; 
+    background-size: auto;
+    height: 105px;
+}
+
+.drip-image-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Contact Us Styling */
+
+.contact-section {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: #fbf6f1;
+}
+
+.contact-section h2 {
+    font-family: 'Gladiola', 'sans serif';
+    text-align: center;
+    color: #B04273;
+    font-size: 40px;
+}
+
+.contact-section .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.contact-section .form-control {
+    border-radius: 5px;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.contact-section .form-control::placeholder {
+    font-size: 14px;
+    color: #ac6666;
+}
+
+.contact-section .btn-primary {
+    background-color: #d881a8;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.contact-section .btn-primary:hover {
+    background-color: #9a3a65;
+    border: none;
+    border-radius: 40px;
+    color: #ffffff;
+}
+
+.contact-section .contact-image {
+    text-align: center;
+}
+
+.contact-section .contact-image img {
+    max-width: 60%;
+    height: auto;
+}
+
+
+/*Scroll to top Styling*/
+.btn-scroll-to-top {
+    display: none; 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #d881a8;
+    color: #ffffff; 
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-scroll-to-top:hover {
+    background-color: #a64d6c; 
+    color: #ffffff;
+}
+
+
+.modal {
+    z-index: 1050; /* Bootstrap default for modal */
+}
+
+.modal-backdrop {
+    z-index: 1040; /* Bootstrap default for backdrop */
+}
+
+.btn-modal {
+    background-color: #B04273;
+    color: #ffffff; 
+}
+
+.btn-modal:hover {
+    background-color: #9a3a65; 
+    color: #ffffff;
+}
+
+
+.modal-dialog {
+    max-height: calc(100vh - 100px); 
+}
